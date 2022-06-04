@@ -1,5 +1,6 @@
-// we use ` ` to create string literals instest of concatination ...
-console.log("\n\About String : ")
+// we use ` ` to create template literals instest of concatination ...
+console.log(`
+>> About String : `)
 
 // Using concatination : 
 
@@ -11,7 +12,7 @@ let profession = "Student";
 let shreyash = "I'm " + name + " a " + (year - birthYear2) + " year old " + profession + " !";
 console.log(shreyash);
 
-// Using sting literals
+// Using template literals
 
 let shreyashNew = `I'm ${name} a ${year - birthYear2} year old ${profession} !`;
 console.log(shreyashNew)

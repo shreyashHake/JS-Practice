@@ -1,5 +1,6 @@
 // Challenge 1
 
+console.log(`>> Challenge 1 : `)
 let marksMass, johnsMass, marksHeight, johnsHeight;
 
 // test data 1 :
@@ -33,4 +34,4 @@ markHigherBMI = BMI_Mark > BMI_John;
 
 console.log(BMI_Mark, BMI_John, markHigherBMI);
 
-// template literals
+// template literals 
