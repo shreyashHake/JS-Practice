@@ -1,7 +1,7 @@
 console.log(`
 >> Equality and inequality : `)
 
-let sellingPrice = Number(prompt("How much money do you have ??"));
+let sellingPrice = 156;
 
 if (sellingPrice === 125) {
     console.log("You can purchase it !!")
@@ -12,7 +12,7 @@ if (sellingPrice === 125) {
 }
 
 // calculation age 
-age = Number(prompt("What is your age !"));
+age = 18;
 
 if (age !== 18) console.log("You are not 18!!")
 else {
