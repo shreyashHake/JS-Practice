@@ -13,9 +13,11 @@ let koalasScore3 = 123;
 
 let koalasAvg = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
 
-if (dolphinsAvg > koalasAvg && dolphinsAvg > 100) {
+console.log(dolphinsAvg, koalasAvg);
+
+if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
     console.log("Team Dolphin is the winner !!");
-} else if (dolphinsAvg == koalasAvg && dolphinsAvg > 100 && koalasAvg > 100) {
+} else if (dolphinsAvg === koalasAvg && dolphinsAvg >= 100 && koalasAvg >= 100) {
     console.log("It's a tie !!");
 } else {
     console.log("Team Koalas is the winner !!");
