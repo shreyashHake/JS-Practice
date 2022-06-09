@@ -9,7 +9,6 @@ function calcAge1(birthYear) {
 const age1 = calcAge1(2002);
 console.log(age1);
 
-
 console.log(`2. Function Expression : `)
 const calcAge2 = function (birthYear) {
     return 2022 - birthYear;
