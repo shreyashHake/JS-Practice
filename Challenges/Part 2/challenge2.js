@@ -11,4 +11,4 @@ function calcTip1(bill) {
     return tip;
 }
 
-console.log(calcTip(100));
+console.log(calcTip1(100));
