@@ -13,13 +13,13 @@ function checkWinner(avgDolhins, avgKoalas) {
 }
 
 // Input 1 : 
-let avgDolhins = calcAverage(44, 23, 71);
-let avgKoalas = calcAverage(65, 54, 49);
+let avgDolhins = calcAverage2(44, 23, 71);
+let avgKoalas = calcAverage2(65, 54, 49);
 
 checkWinner(avgDolhins, avgKoalas);
 
 // Input 2 ; 
-avgDolhins = calcAverage(85, 54, 41);
-avgKoalas = calcAverage(23, 34, 27);
+avgDolhins = calcAverage2(85, 54, 41);
+avgKoalas = calcAverage2(23, 34, 27);
 
 checkWinner(avgDolhins, avgKoalas);
