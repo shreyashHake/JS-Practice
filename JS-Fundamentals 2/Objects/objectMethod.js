@@ -7,6 +7,8 @@ const shreyash = {
     birthYear: 2002,
     friends: ['Rushabh', 'Tanmay', 'Mehul', 'Sharukh', 'Harshal'],
     college: 'GHRCE',
+    job: 'Student',
+    driversLicencd: false,
 
     // using function expression inside the object : 
     // method 1 : 
@@ -19,7 +21,15 @@ const shreyash = {
     //     return 2022 - this.birthYear;
     // }
     
+    // Method 3 : 
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
 
+    getSummary: function () {
+        return (`${this.firstName} is a ${this.calcAge()} years old ${this.job} and he has ${this.driversLicencd ? 'a' : 'no'} driving licence.`);
+    }
 };
 
 // Method 1 :
@@ -29,3 +39,8 @@ const shreyash = {
 // Method 2 :
 // console.log(shreyash.calcAge());
 // console.log(shreyash['calcAge']());
+
+// Method 3  : 
+console.log(shreyash.calcAge())  // we only need to calculate age once then we can simply reuse them in furthre code .....
+console.log(shreyash.age);
+console.log(shreyash.getSummary());
