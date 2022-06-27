@@ -79,7 +79,18 @@ main {
   opacity: 1;
 }
 
-.current {
+.current0  {
+  background-color: #df3c6a;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current1 {
   background-color: #df3c6a;
   opacity: 0.8;
   border-radius: 9px;
@@ -162,7 +173,7 @@ main {
 }
 
 .player--winner {
-  background-image: linear-gradient(to top left, #2cc5df 0%, #61eb68 100%);
+  background-image: linear-gradient(to top left, #2cc4dfac 0%, #61eb68a8 100%);
 }
 
 .player--winner .name {

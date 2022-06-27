@@ -21,6 +21,31 @@ const switchPlayer = function () {
   player1El.classList.toggle("player--active");
 };
 
+const foundWinner = function () {
+  playing = false;
+
+  // removing dice, dice button and hold button
+  diceEl.classList.add("hidden");
+  document.querySelector(".btn--roll").classList.add("hidden");
+  document.querySelector(".btn--hold").classList.add("hidden");
+  document.querySelector(".current0").classList.add("hidden");
+  document.querySelector(".current1").classList.add("hidden");
+
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.add("player--winner");
+
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove("player--active");
+
+  
+  document.getElementById(`name--${activePlayer}`).textContent = `Winner 🥳`;
+
+  document.getElementById(`name--${activePlayer === 0 ? 1 : 0}`).textContent =
+    "Better Luck Next Time 😇";
+};
+
 // setting initial score to 0 and hidding the dice.
 score0El.textContent = 0;
 score1El.textContent = 0;
@@ -30,6 +55,7 @@ const score = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
+const reach = 20;
 
 // adding responce to roll btn
 btnRoll.addEventListener("click", function () {
@@ -59,38 +85,50 @@ btnHold.addEventListener("click", function () {
     // updating the current score
     console.log(currentScore);
     score[activePlayer] += currentScore;
+
     document.getElementById(`score--${activePlayer}`).textContent =
       score[activePlayer];
-    console.log(score[activePlayer]);
 
     // check for winner
-    if (score[activePlayer] >= 20) {
-      playing = false;
-
-      // removing dice, dice button and hold button
-      diceEl.classList.add("hidden");
-      document.querySelector(".btn--roll").classList.add("hidden");
-      document.querySelector(".btn--hold").classList.add("hidden");
-
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.add("player--winner");
-
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.remove("player--active");
-      
-      document
-        .getElementById(`name--${activePlayer}`)
-        .textContent = "Winner 🥳";
-      
-      document
-        .getElementById(`name--${activePlayer === 0 ? 1 : 0}`)
-        .textContent = "Better Luck Next Time 😇";
-
+    if (score[activePlayer] >= reach) {
+      foundWinner();
     } else {
       // switch the player
       switchPlayer();
     }
   }
+});
+
+btnNew.addEventListener('click', function () {
+   playing = true;
+
+   // removing dice, dice button and hold button
+   diceEl.classList.add("hidden");
+   document.querySelector(".btn--roll").classList.remove("hidden");
+   document.querySelector(".btn--hold").classList.remove("hidden");
+  document.querySelector(".current0").classList.remove("hidden");
+  document.querySelector(".current1").classList.remove("hidden");
+
+   document
+     .querySelector(`.player--${activePlayer}`)
+     .classList.remove("player--winner");
+
+   document
+     .querySelector(`.player--${activePlayer}`)
+     .classList.add("player--active");
+
+  // Naming the players : 
+   document.getElementById(`name--0`).textContent = `Player 1`;
+  document.getElementById(`name--1`).textContent = "Player 2";
+  
+  score[0] = score[1] = 0;
+  currentScore = 0;
+  document.getElementById(`current--${0}`).textContent =
+  document.getElementById(`current--${1}`).textContent =
+    0;
+  
+  document.getElementById(`score--${0}`).textContent =
+    0;
+  document.getElementById(`score--${1}`).textContent =
+    0;
 });
