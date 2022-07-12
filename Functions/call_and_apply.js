@@ -49,4 +49,4 @@ book.apply(blueOrigin, flightData); // Using Apply
 book.call(blueOrigin, ...flightData); // Using call
 
 // The difference between 'call' and 'apply' is 'apply' take 'array of data' as arguments and 'call' takes 'list of data'..
-// 'Call' is used mostly in moder JS than that of 'Apply'.
+// 'Call' is used mostly in moderṇ JS than that of 'Apply'.
